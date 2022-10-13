@@ -33,7 +33,7 @@
                     <div class="kontakty">
                         [#if udaj.email?has_content]
                         <div><i class="las la-at"></i> <span>${udaj.email}</span></div>
-
+                        [/#if]
                         [#if udaj.telefon?has_content]
                         <div><i class="las la-phone-alt"></i> <span>${udaj.telefon}</span></div>
                         [/#if]
