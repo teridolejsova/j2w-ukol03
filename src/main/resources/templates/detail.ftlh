@@ -13,17 +13,29 @@
 <body>
 <div class="detail">
     <div class="vizitka">
+        [#if jedenUdaj.jmeno?has_content]
         <div class="jmeno">${jedenUdaj.jmeno}</div>
+        [/#if]
+        [#if jedenUdaj.firma?has_content]
         <div class="firma">${jedenUdaj.firma}</div>
+        [/#if]
         <div class="udaje">
+            [#if jedenUdaj.celaAdresa?has_content]
             <div class="adresa">
                 <div>${jedenUdaj.ulice}</div>
                 <div><span>${jedenUdaj.obecPsc}</span></div>
+                [/#if]
             </div>
             <div class="kontakty">
+                [#if jedenUdaj.email?has_content]
                 <div><i class="las la-at"></i> <span>${jedenUdaj.email}</span></div>
+                [/#if]
+                [#if jedenUdaj.telefon?has_content]
                 <div><i class="las la-phone-alt"></i> <span>${jedenUdaj.telefon}</span></div>
+                [/#if]
+                [#if jedenUdaj.web?has_content]
                 <div><i class="las la-globe"></i> <span>${jedenUdaj.web}</span></div>
+                [/#if]
             </div>
         </div>
     </div>

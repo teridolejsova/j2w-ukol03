@@ -17,17 +17,29 @@
     [#list seznamVizitek as udaj]
         <a href="/detail/${udaj?index}">
             <div class="vizitka">
+                [#if udaj.jmeno?has_content]
                 <div class="jmeno">${udaj.jmeno}</div>
+                [/#if]
+                [#if udaj.firma?has_content]
                 <div class="firma">${udaj.firma}</div>
+                [/#if]
                 <div class="udaje">
+                    [#if udaj.celaAdresa?has_content]
                     <div class="adresa">
                         <div>${udaj.ulice}</div>
                         <div><span>${udaj.obecPsc}</span></div>
+                        [/#if]
                     </div>
                     <div class="kontakty">
+                        [#if udaj.email?has_content]
                         <div><i class="las la-at"></i> <span>${udaj.email}</span></div>
+
+                        [#if udaj.telefon?has_content]
                         <div><i class="las la-phone-alt"></i> <span>${udaj.telefon}</span></div>
+                        [/#if]
+                        [#if udaj.web?has_content]
                         <div><i class="las la-globe"></i> <span>${udaj.web}</span></div>
+                        [/#if]
                     </div>
                 </div>
             </div>
